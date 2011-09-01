@@ -48,4 +48,4 @@ path = "PRO2.streambase.omh.all.jiniIn.HotelBaseRateService.fetchBaseRates.avgLa
 data = retrieve_prod_data(path, construct_date(ARGV[0]), construct_date(ARGV[1]))
 
 data = extract_dataset(data)
-puts data
+p data
