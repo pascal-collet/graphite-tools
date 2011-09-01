@@ -47,5 +47,6 @@ end
 path = "PRO2.streambase.omh.all.jiniIn.HotelBaseRateService.fetchBaseRates.avgLatency"
 data = retrieve_prod_data(path, construct_date(ARGV[0]), construct_date(ARGV[1]))
 
+
 data = extract_dataset(data)
 p data
