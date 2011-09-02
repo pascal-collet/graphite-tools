@@ -80,6 +80,17 @@ def extract_header(data)
   [serie_name, start_time, end_time, step]
 end
 
+def plot(title, data, labels)
+  r = RSRuby.instance
+  r.pdf('./output.pdf')
+  #r.hist(data)
+  r.boxplot(data)
+  #r.plot(labels, data, :main => title, :xlab => "date", :ylab => "average")
+  #r.line(data, :main => title, :xlab => "date", :type => "l")
+  # terminate the device driver (aka calling the drawing method...)
+  r.dev_off.call
+end
+
 def print_stats(data)
   r = RSRuby.instance
   stats = r.summary(data)
